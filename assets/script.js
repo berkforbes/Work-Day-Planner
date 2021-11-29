@@ -1,9 +1,14 @@
+$(document).ready(function () {
 var rightNow = moment().format("MMMM Do, YYYY - hh:mm a");
-currentDayEl = document.querySelector("#currentDay");
+$("#currentDay").html(rightNow); 
+//Show current date and time in header
+//currentDayEl = document.querySelector("#currentDay");
+//currentDayEl.textContent = rightNow;
 var currentHour = moment().format("HH");
 
-//Show current date and time in header
-currentDayEl.textContent = rightNow;
+$("#clearCalendarBtn").click(function(event) {
+  $("textarea").val("");
+  localStorage.clear();
 
-
-
+})
+})
